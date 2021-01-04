@@ -264,16 +264,6 @@ header {
 .works {
   padding-bottom: 94px;
 }
-.works-list {
-  display: flex;
-}
-.works-list .list:first-child {
-  margin-left: 0;
-}
-.works-list .list {
-  margin-left: 30px;
-}
-
 .title-section {
   margin-bottom: 50px;
 
@@ -281,6 +271,31 @@ header {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+.works-list {
+  display: flex;
+}
+.works-list .list:first-child {
+  margin-left: 0;
+}
+.works-list .list {
+  position: relative;
+  height: 294px;
+  margin-left: 30px;
+}
+.work-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+
+  padding: 27px 0px;
+  text-align: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
+  font-weight: bold;
 }
 /* team */
 .team {
