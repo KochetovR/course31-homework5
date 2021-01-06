@@ -44,16 +44,10 @@
 
     <main>
 <!--Герой-->
-<!-- позже добавлю изображение вместо фона. поставил фон, потому что белый цвет текста не виден на сайте -->
         <section class="hero overlay"> 
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <div class="hero-div">
-                    <button data-modal-open class="hero-button">Заказать услугу</button> 
-                    <div class="backdrop is-hidden" data-modal>
-                        <div class="modal">
-                            <button data-modal-close class="close-modal">X</button>
-                        </div>
-                    </div>
+                    <button data-modal-open class="hero-button">Заказать услугу</button>  
                 </div>
         </section>
 
@@ -385,6 +379,16 @@
                 </div>
             </div>
     </footer>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="close-modal" data-modal-close>
+                <svg class="close-svg">
+                    <use href="./images/symbol-defs.svg#icon-close-1"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
     <script src="./js/modal.js"></script>
 </body>
 </html>
