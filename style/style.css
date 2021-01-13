@@ -529,8 +529,8 @@ header {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-  /* нужно в transition-property добавить после цвета box-shadow? */
-  transition-property: background-color, color;
+
+  transition-property: background-color, color, box-shadow;
   transition: var(--animation-duration) var(--animation-timing);
 
   background-color: var(--secondary-backgroung-color);
@@ -594,8 +594,8 @@ header {
 .decor {
   position: relative;
   display: block;
-  /* и тут нужно указать тень в transition? */
-  transition: var(--animation-duration) var(--animation-timing);
+
+  transition: box-shadow var(--animation-duration) var(--animation-timing);
 
   text-decoration: none;
 }
