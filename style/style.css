@@ -16,6 +16,8 @@
   --hero-bg-color: #c4c4c4;
   --footer-backgroung-color: #2f303a;
   --gradient-hero-color: rgba(47, 48, 58, 0.4);
+  --animation-duration: 250ms;
+  --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -111,14 +113,14 @@ header {
   display: block;
   padding: 32px 0;
 
+  transition: color var(--animation-duration) var(--animation-timing);
+
   color: var(--title-text-color);
   text-decoration: none;
 }
 .nav-link:focus,
 .nav-link:hover {
   color: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav .nav-link.current {
   color: var(--accent-color);
@@ -141,6 +143,9 @@ header {
   display: block;
   padding: 32px 0;
 
+  transition-property: color, fill;
+  transition: var(--animation-duration) var(--animation-timing);
+
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
   text-decoration: none;
@@ -149,7 +154,6 @@ header {
 .nav-contacts:hover {
   color: var(--accent-color);
   fill: currentColor;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .svg-mail {
   margin-right: 10px;
@@ -370,7 +374,7 @@ header {
   background-color: var(--primary-white-color);
 }
 .team-list .item div {
-  padding: 30px 0;
+  padding: 30px 32px;
   text-align: center;
 }
 
@@ -389,7 +393,6 @@ header {
 }
 .team-links {
   display: flex;
-  margin: 0px 32px;
   justify-content: space-between;
 }
 
@@ -401,6 +404,9 @@ header {
   margin-right: 10px;
   color: var(--primary-text-color);
   fill: var(--svg-team-color);
+
+  transition-property: color, fill;
+  transition: var(--animation-duration) var(--animation-timing);
 }
 .container-link:last-child {
   margin-right: 0px;
@@ -411,8 +417,6 @@ header {
   border-radius: 50%;
   color: var(--primary-white-color);
   fill: currentColor;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-svg {
   width: 20px;
@@ -440,19 +444,15 @@ header {
   margin-right: 0px;
 }
 
-.clients-container a:hover,
-.clients-container a:focus {
-  color: var(--accent-color);
-  cursor: pointer;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .clients-link {
   display: block;
   width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-property: color, fill;
+  transition: var(--animation-duration) var(--animation-timing);
 
   color: var(--primary-text-color);
   fill: var(--svg-team-color);
@@ -465,8 +465,6 @@ header {
   color: var(--accent-color);
   fill: var(--accent-color);
   cursor: pointer;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-svg1 {
@@ -531,6 +529,9 @@ header {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+  /* нужно в transition-property добавить после цвета box-shadow? */
+  transition-property: background-color, color;
+  transition: var(--animation-duration) var(--animation-timing);
 
   background-color: var(--secondary-backgroung-color);
   color: var(--title-text-color);
@@ -546,8 +547,6 @@ header {
   color: var(--primary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .examples {
   display: flex;
@@ -595,6 +594,8 @@ header {
 .decor {
   position: relative;
   display: block;
+  /* и тут нужно указать тень в transition? */
+  transition: var(--animation-duration) var(--animation-timing);
 
   text-decoration: none;
 }
@@ -602,8 +603,6 @@ header {
 .decor:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .examples-overlay {
   position: relative;
@@ -626,7 +625,7 @@ header {
   line-height: 1.55;
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--animation-duration) var(--animation-timing);
 }
 
 .decor:hover .overlay-text,
@@ -662,6 +661,8 @@ header {
 .footer-contacts {
   display: block;
 
+  transition: color var(--animation-duration) var(--animation-timing);
+
   color: var(--footer-color);
   line-height: 1.71;
   text-decoration: none;
@@ -669,8 +670,6 @@ header {
 .footer-contacts:focus,
 .footer-contacts:hover {
   color: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-position {
   display: flex;
@@ -702,6 +701,8 @@ header {
   width: 44px;
   height: 44px;
 
+  transition: background-color var(--animation-duration) var(--animation-timing);
+
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
@@ -709,8 +710,6 @@ header {
 .footer-link-mess:hover,
 .footer-link-mess:focus {
   background-color: var(--accent-color);
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link-mess:last-child {
 }
